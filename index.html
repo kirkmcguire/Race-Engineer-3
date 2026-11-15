@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>My Streamlit App</title>
+    <title>My Telemetry App</title>
+    <!-- Corrected Stlite CSS -->
     <link
       rel="stylesheet"
-      href="https://jsdelivr.net"
+      href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.51.0/build/stlite.css"
     />
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://jsdelivr.net"></script>
+    <!-- Corrected Stlite JavaScript Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.51.0/build/stlite.js"></script>
     <script>
       stlite.mount(
         {
-          requirements: ["pandas", "numpy", "plotly"], // <-- Add any extra libraries here (e.g., ["pandas", "numpy"]) or leave as []
-          entrypoint: "joke.py", // <-- Replace with your exact .py filename
+          requirements: ["pandas", "numpy", "plotly"], 
+          entrypoint: "joke.py", // Make sure this matches your exact .py filename
           files: {
             "joke.py": {
-              url: "joke.py", // <-- Replace both with your exact .py filename
+              url: "joke.py", // Must match the filename in your repo root
             },
           },
         },
